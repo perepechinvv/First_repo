@@ -1,2 +1,2 @@
 # val = int(input(">>> "))
-print(int("2+2"))
+print(int(2+2))
