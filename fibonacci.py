@@ -10,4 +10,3 @@ def fibonacci(n):
 
 result = fibonacci(n)
 print(f'Fibonachi {result}')  
-               
