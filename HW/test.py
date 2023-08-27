@@ -1,32 +1,16 @@
-points = {
-    (0, 1): 2,
-    (0, 2): 3.8,
-    (0, 3): 2.7,
-    (1, 2): 2.5,
-    (1, 3): 4.1,
-    (2, 3): 3.9,
-}
+def formatted_numbers():
 
-coordinates = [0, 1, 3, 2, 0, 1]
+    header = '|{:^10}|{:^10}|{:^10}|'.format('decimal', 'hex', 'binary')
 
-def calculate_distance(coordinates):
-
-    dist = 0
+    list_numbers = list()
+    list_numbers.append(header)
     
-    for i in range(len(coordinates) - 1):
-     
-        x_y = coordinates[i:i + 2]
+    for i in range(16):
+        list_numbers.append('|{:<10}|{:^10}|{:>10}|'.format('{:d}'.format(i), 
+                                                              '{:x}'.format(i), 
+                                                              '{:b}'.format(i)))
+    
+    return list_numbers    
 
-        print(x_y)
-
-        if len(x_y) == 2:
-            
-            x_y.sort()
-            
-            dist += points[tuple(x_y)]
-        
-    return dist
-
-print(calculate_distance(coordinates))
-
-print(range(len(coordinates) - 1))
+for el in formatted_numbers():
+    print(el)    
