@@ -8,7 +8,7 @@ text = """Guido van Rossum began working on Python in the late 1980s, as a succe
 
 spam_words = ['began', 'Python']
 
-spam_case = re.findall(('|'.join(spam_words)), text, re.IGNORECASE)
+spam_case = re.findall(('|'.join(spam_words)), text, flags=re.IGNORECASE)
 
 s = re.sub('|'.join(spam_case), repl, text)
 
