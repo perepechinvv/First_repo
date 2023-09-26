@@ -9,7 +9,7 @@ dir_suff_dict = {"Images": ['.jpg', '.jpeg', '.png', '.gif', '.tiff', '.ico', '.
                  "PDF": [".pdf"],
                  "HTML": [".html", ".htm", ".xhtml"],
                  "EXE_MSI": [".exe", ".msi"],
-                 "1С": [".erf", ".epf", ".cf"],
+                 "1C": [".erf", ".epf", ".cf"],
                  "PYTHON": [".py", ".pyw"]}
 
 
@@ -27,9 +27,9 @@ def sort_func(path_dir):
 
 
 if __name__ == "__main__":
-    path_d = input('[+] Введите путь к директории для сортировки: ')
+    path_d = input('[+] Enter the path to the directory for sorting: ')
     if not Path(path_d).exists():
-        print('[-] Директории не существует')
+        print('[-] The directory does not exist')
     else:
         sort_func(path_d)
-    print('[!] Сортировка завершена')
+    print('[!] Sorting is completed')
